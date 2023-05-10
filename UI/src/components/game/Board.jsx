@@ -39,6 +39,15 @@ const Board = ({ socket }) => {
         return squares[2];
       }
     }
+
+    //check for draw
+    const draw= squares.every((val)=>{
+      return val!=null;
+    })
+    if(draw){
+      return "draw";
+    }
+
     return null;
   };
   const state = winner();
@@ -84,7 +93,7 @@ const Board = ({ socket }) => {
     <>
       {state ? (
         <div className="text-center text-gray-100 md:text-2xl text-xl mt-24 font-extrabold font-mono">
-          {Player.current === user.id
+          {state==="draw" ? "The game ends in a draw. No one wins 😉" : Player.current === user.id
             ? "You Won 🎉"
             : "Better luck next time 🙂"}
         </div>
