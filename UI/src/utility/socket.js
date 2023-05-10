@@ -1,5 +1,4 @@
 import io from 'socket.io-client';
-import { serverURL } from './constants';
 
-export const Socket = io(`http://${serverURL}`);
+export const Socket = io(`wss://game-api-websocket.maheshdhoran.com`);
 

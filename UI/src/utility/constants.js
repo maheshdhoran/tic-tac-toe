@@ -1,1 +1,1 @@
-export const serverURL= "127.0.0.1:8000"
+export const serverURL= "game-api.maheshdhoran.com"

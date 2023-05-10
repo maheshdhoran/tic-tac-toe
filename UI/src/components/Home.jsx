@@ -21,7 +21,7 @@ const Home = () => {
       });
       return;
     }
-    fetch(`http://${serverURL}/api/join`, {
+    fetch(`https://${serverURL}/api/join`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ const Home = () => {
   };
 
   const createRoom = () => {
-    fetch(`http://${serverURL}/api/create`, {
+    fetch(`https://${serverURL}/api/create`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
